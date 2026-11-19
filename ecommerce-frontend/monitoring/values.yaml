@@ -1,0 +1,6 @@
+grafana:
+  adminPassword: "ChangeMe123!"
+
+prometheus:
+  prometheusSpec:
+    retention: 3d
