@@ -1,6 +1,23 @@
+
 grafana:
   adminPassword: "ChangeMe123!"
 
 prometheus:
   prometheusSpec:
     retention: 3d
+
+prometheusOperator:
+  livenessProbe:
+    enabled: true
+    initialDelaySeconds: 60
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+
+  readinessProbe:
+    enabled: true
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+
